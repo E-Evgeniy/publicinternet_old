@@ -2,6 +2,7 @@ module Api
   # PlacesController
   class PlacesController < ApplicationController
     def index
+      puts('PARAMS = ',params)
       places = Place.all.map do |place|
         {
           name: place.name,
